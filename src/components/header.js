@@ -3,18 +3,24 @@ import '../css/styles.css';
 
 class Header extends Component {
 
-  handleChange(e) {
-    console.log(e.target.value)
+  state = {
+    title: 'The keywords are:',
+    keywords: ''
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      keywords: e.target.value,
+    })
   }
 
   render() {
+    console.log('Keywords are', this.state.keywords);
     return (
-      <div>
-        <header className='header'>
-          <div className='logo'>Logo</div>
-          <input type='text' onChange={this.handleChange}/>
-        </header>
-      </div>
+      <header className='header'>
+        <div className='logo'>Logo</div>
+        <input type='text' onChange={this.handleChange}/>
+      </header>
     );
   }
 }
