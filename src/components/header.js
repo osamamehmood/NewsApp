@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
+import '../css/styles.css';
 
-const Header = () => {
-  return (
-    <div>
-      Header goes here
-    </div>
-  )
+class Header extends Component {
+
+  handleChange(e) {
+    console.log(e.target.value)
+  }
+
+  render() {
+    return (
+      <div>
+        <header className='header'>
+          <div className='logo'>Logo</div>
+          <input type='text' onChange={this.handleChange}/>
+        </header>
+      </div>
+    );
+  }
 }
 
 export default Header;
