@@ -15,7 +15,6 @@ class Header extends Component {
   }
 
   render() {
-    console.log('Keywords are', this.state.keywords);
     return (
       <header className='header'>
         <div className='logo'>Logo</div>
