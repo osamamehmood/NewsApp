@@ -26,7 +26,7 @@ class App extends Component {
     return (
       <div>
         <Header getKeyWords={this.getKeyWord}/>
-        <NewsList news={this.state.filtered.length === 0 ?  unFilteredNews : filteredNews}>
+        <NewsList news={this.state.filtered.length === 0 ? unFilteredNews : filteredNews}>
           <h3>
             The news are:
           </h3>
