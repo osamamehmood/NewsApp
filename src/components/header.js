@@ -9,12 +9,14 @@ class Header extends Component {
   }
 
   handleChange = (e) => {
+    console.log('Hi');
     this.setState({
       keywords: e.target.value,
     })
   }
 
   render() {
+    console.log(this.props.keywords)
     return (
       <header className='header'>
         <div className='logo'>Logo</div>

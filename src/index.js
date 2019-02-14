@@ -8,10 +8,14 @@ class App extends Component {
   state = {
     news: JSON,
   }
+
+  getKeyWord = () => {
+    console.log('Hey');
+  }
   render() {
     return (
       <div>
-        <Header />
+        <Header keywords={this.getKeyWord}/>
         <NewsList news={this.state.news}/>
       </div>
     );
