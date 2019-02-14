@@ -21,10 +21,12 @@ class App extends Component {
   }
 
   render() {
+    let filteredNews = this.state.filtered;
+    let unFilteredNews = this.state.news;
     return (
       <div>
         <Header getKeyWords={this.getKeyWord}/>
-        <NewsList news={this.state.filtered.length === 0 ?  this.state.news : this.state.filtered}>
+        <NewsList news={this.state.filtered.length === 0 ?  unFilteredNews : filteredNews}>
           <h3>
             The news are:
           </h3>
