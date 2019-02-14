@@ -7,15 +7,20 @@ import NewsList from './components/NewsList';
 class App extends Component {
   state = {
     news: JSON,
+    keywords: '',
   }
 
-  getKeyWord = () => {
-    console.log('Hey');
+  getKeyWord = (e) => {
+    this.setState({
+      keywords: e.target.value,
+    });
   }
+
   render() {
+    console.log(this.state.keywords);
     return (
       <div>
-        <Header keywords={this.getKeyWord}/>
+        <Header getKeyWords={this.getKeyWord}/>
         <NewsList news={this.state.news}/>
       </div>
     );
