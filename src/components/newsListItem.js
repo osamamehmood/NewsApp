@@ -1,7 +1,6 @@
 import React from 'react';
 
 const NewsListItem = (props) => {
-  console.log(props.news);
   return(
     <div>
       <div>
